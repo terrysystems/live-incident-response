@@ -73,6 +73,20 @@ Three users have interactive login shells:
 Meaning:
 These accounts are capable of logging into the system. The presence of a user named "hacker" is suspicious and may indicate unauthorized access or a compromised account.
 
+### Login Activity Analysis
+
+Command: last
+Result: Login history reviewed
+
+Observation:
+- sysadmin is currently logged in
+- reports user had prior login activity
+- no login activity found for user "hacker"
+
+Meaning:
+The "reports" account appears to be actively used.
+The absence of login history for the "hacker" account is suspicious, suggesting it may have been recently created or intended for unauthorized access.
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
