@@ -153,6 +153,17 @@ Local system users are allowed to authenticate via FTP
 Meaning:
 Any valid system account can access the FTP service. Without a user restriction list, this increases the attack surface if credentials are compromised.
 
+The vsftpd FTP service was identified as active and potentially insecure.
+
+Actions taken:
+- Stopped the service using: systemctl stop vsftpd
+- Disabled the service using: systemctl disable vsftpd
+
+Result:
+- Service is no longer running
+- Service will not start on system reboot
+- System exposure via FTP has been mitigated
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
