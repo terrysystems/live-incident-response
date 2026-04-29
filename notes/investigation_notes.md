@@ -37,6 +37,18 @@ FTP service (port 21) is active, which is less commonly used and may present a s
 Meaning:
 Potential attack surface identified, requires further investigation
 
+### FTP Service Identification
+
+Command: ps aux | grep ftp
+Result: vsftpd service running (/usr/sbin/vsftpd /etc/vsftpd.conf)
+
+Observation:
+FTP service confirmed active and listening on port 21
+
+Meaning:
+FTP service identified as a potential entry point or attack surface, requires further investigation
+
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
