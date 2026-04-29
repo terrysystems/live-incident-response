@@ -164,6 +164,16 @@ Result:
 - Service will not start on system reboot
 - System exposure via FTP has been mitigated
 
+ ## A suspicious user account named 'hacker' was identified.
+
+The account has:
+- A valid shell (/bin/bash)
+- A home directory (/home/hacker)
+
+No login activity was found using the `last` command, suggesting:
+- The account may have been created for persistence
+- Or used through non-interactive methods (
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
