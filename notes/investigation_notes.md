@@ -109,6 +109,17 @@ The sysadmin account has administrative privileges
 Meaning:
 This account has full control over the system and can execute privileged commands. It is a high-value target for attackers and critical for system management.
 
+### Hacker User Directory Analysis
+
+Command: ls -la /home/hacker
+Result: Only default shell configuration files present
+
+Observation:
+No suspicious files, scripts, or hidden backdoors found in the hacker user's home directory
+
+Meaning:
+The account appears to be newly created with no active usage. This suggests it may have been established as a persistence mechanism for future unauthorized access.
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
