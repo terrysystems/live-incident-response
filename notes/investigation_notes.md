@@ -131,6 +131,17 @@ No user access control list is configured for FTP
 Meaning:
 FTP access is not restricted by a user list. Combined with the lack of encryption, this increases the risk of unauthorized access using any valid system account.
 
+### FTP Service Vulnerbility
+
+Command: ps aux | grep ftp
+Result: vsftpd process running as root
+
+Observation:
+FTP service is actively running on the system
+
+Meaning:
+The system is currently exposing an active FTP service. Combined with lack of encryption and access controls, this represents a security risk.
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
