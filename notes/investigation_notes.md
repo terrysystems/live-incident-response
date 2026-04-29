@@ -120,6 +120,17 @@ No suspicious files, scripts, or hidden backdoors found in the hacker user's hom
 Meaning:
 The account appears to be newly created with no active usage. This suggests it may have been established as a persistence mechanism for future unauthorized access.
 
+### FTP User Access Control Check vulnerbility
+
+Command: cat /etc/vsftpd.userlist
+Result: File not found
+
+Observation:
+No user access control list is configured for FTP
+
+Meaning:
+FTP access is not restricted by a user list. Combined with the lack of encryption, this increases the risk of unauthorized access using any valid system account.
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
