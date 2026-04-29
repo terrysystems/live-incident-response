@@ -142,6 +142,17 @@ FTP service is actively running on the system
 Meaning:
 The system is currently exposing an active FTP service. Combined with lack of encryption and access controls, this represents a security risk.
 
+### FTP Local User Access
+
+Command: cat /etc/vsftpd.conf | grep -i local_enable
+Result: local_enable=YES
+
+Observation:
+Local system users are allowed to authenticate via FTP
+
+Meaning:
+Any valid system account can access the FTP service. Without a user restriction list, this increases the attack surface if credentials are compromised.
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
