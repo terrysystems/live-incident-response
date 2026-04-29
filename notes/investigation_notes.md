@@ -59,6 +59,19 @@ FTP service is running without encryption
 Meaning:
 Credentials and data are transmitted in plain text, making the service vulnerable to interception. This represents a potential security risk and possible attack vector.
 
+### User Enumeration
+
+Command: cat /etc/passwd
+Result: Multiple system users identified
+
+Observation:
+Three users have interactive login shells:
+- sysadmin
+- reports
+- hacker
+
+Meaning:
+These accounts are capable of logging into the system. The presence of a user named "hacker" is suspicious and may indicate unauthorized access or a compromised account.
 
 ## Phase 2 — Remediation and System Restoration
 
