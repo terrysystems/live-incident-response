@@ -48,6 +48,17 @@ FTP service confirmed active and listening on port 21
 Meaning:
 FTP service identified as a potential entry point or attack surface, requires further investigation
 
+### First Vulnerbility in FTP
+
+Command: cat /etc/vsftpd.conf
+Result: SSL disabled (ssl_enable=NO)
+
+Observation:
+FTP service is running without encryption
+
+Meaning:
+Credentials and data are transmitted in plain text, making the service vulnerable to interception. This represents a potential security risk and possible attack vector.
+
 
 ## Phase 2 — Remediation and System Restoration
 
