@@ -86,6 +86,28 @@ Observation:
 Meaning:
 The "reports" account appears to be actively used.
 The absence of login history for the "hacker" account is suspicious, suggesting it may have been recently created or intended for unauthorized access.
+### User Privilege Check
+
+Command: id hacker
+Result: uid=1002(hacker) gid=1002(hacker) groups=1002(hacker)
+
+Observation:
+User "hacker" does not belong to any privileged groups (e.g., sudo)
+
+Meaning:
+The account does not currently have elevated privileges. However, its presence remains suspicious and could be used for unauthorized access or future privilege escalation.
+
+
+### Sysadmin Privilege Check
+
+Command: id sysadmin
+Result: User belongs to sudo group
+
+Observation:
+The sysadmin account has administrative privileges
+
+Meaning:
+This account has full control over the system and can execute privileged commands. It is a high-value target for attackers and critical for system management.
 
 ## Phase 2 — Remediation and System Restoration
 
