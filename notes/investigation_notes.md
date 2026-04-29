@@ -26,6 +26,17 @@ No immediately obvious malicious processes detected
 Meaning:
 Further investigation required to identify subtle or hidden threats
 
+### Network Activity
+
+Command: ss -tulnp
+Result: Open ports detected on 80 (HTTP), 21 (FTP), and 22 (SSH)
+
+Observation:
+FTP service (port 21) is active, which is less commonly used and may present a security risk
+
+Meaning:
+Potential attack surface identified, requires further investigation
+
 ## Phase 2 — Remediation and System Restoration
 
 ## Questions / Findings to Verify
