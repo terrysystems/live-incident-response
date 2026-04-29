@@ -172,8 +172,57 @@ The account has:
 
 No login activity was found using the `last` command, suggesting:
 - The account may have been created for persistence
-- Or used through non-interactive methods (
+- Or used through non-interactive methods 
 
-## Phase 2 — Remediation and System Restoration
+## Phase 2 – Remediation and System Restoration
 
-## Questions / Findings to Verify
+
+Based on the findings from Phase 1, remediation actions were taken to remove unauthorized access and reduce potential attack vectors.
+
+
+
+Actions performed:
+
+Stopped the FTP service to eliminate active exposure:
+
+systemctl stop vsftpd
+
+Disabled the FTP service to prevent it from starting on reboot:
+
+systemctl disable vsftpd
+
+Identified and removed the unauthorized user account:
+
+sudo userdel -r hacker
+
+Verified that the user account and associated home directory were removed
+
+Checked for active processes related to the unauthorized user:
+
+ps aux | grep hacker
+
+Inspected cron directories for persistence mechanisms:
+
+sudo ls -la /var/spool/cron/crontabs/
+
+Reviewed login history for suspicious activity:
+
+last
+
+
+
+All remediation actions were validated to ensure no remaining traces of the unauthorized user or active attack vectors.
+
+
+
+Result:
+
+Unauthorized user account successfully removed
+
+FTP service disabled, reducing system exposure
+
+No evidence of active processes or persistence mechanisms
+
+System restored to a secure operational state
+
+
